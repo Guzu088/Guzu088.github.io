@@ -1,8 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+:root {
+    --navyblue: #03045e;
+    --darkcornflowerblue: #023e8a;
+    --starcommandblue: #0077b6;
+    --skybluecrayola: #48cae4;
+}
+
+*{
+    margin: 5px;
+    padding: 0;
+    font-size: 30px;
+}
+
 body {
-    background-color: rgb(65, 65, 65);
-    color: rgb(226, 226, 226);
+    background-color: #f0f0f0;
+    color: black;
+}
+
+/*----------------------Header---------------------- */
+
+header {
     display: flex;
-    justify-content: center;
+}
+
+.left-header {
+    position: relative;
+    width: 400px;
+
+}
+
+.right-header {
+    width:70%;
+    margin-top: 80px;
+}
+
+img {
+    width: 239px;
+    margin: 20px;
+}
+
+.frame {
+    position: absolute;
+    top: 26px;
+    left: 4px;
+    width: 235px;
+    height: 235px;
+    border: 4px solid var(--starcommandblue);
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid #2a0a5e;
+}
+
+h2 {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+h1, h2 {
+    color: var(--navyblue);
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+p{
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 0.7rem;
+    color: #727880;
+}
+
+/*----------------------Main---------------------- */
+
+main{
+    display: flex;
+    gap: 3rem;
+}
+
+/*-----------Contacts----------- */
+.contacts {
+    background-image: linear-gradient(to bottom right, #023e8a, #48cae4);
+    color: white;
+    width: 265px;
+    text-align: center;
+}
+
+.contacts h2 {
+    color: white;
+    margin-top: 90px;
+    border-bottom: 2px solid white;
+}
+
+h4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+}
+
+a{
+    display: block;
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.contacts div {
+    margin-top: 50px;
+    padding: 5px;
+}
+
+/*-----------Skillset----------- */
+
+.skillset {
+    margin-left: 30px;
+}
+
+.skillset h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--navyblue);
+}
+
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    color: var(--navyblue);
 }
 
 ul {
@@ -11,11 +141,15 @@ ul {
 }
 
 li {
+    font-family: 'Anonymous Pro', monospace;
     list-style-type: none;
-    font-size: 65%;
+    font-size: 0.7rem;
+    columns: grey;
+    padding-left: 10px;
 }
 
 li:first-child {
     margin-top: 20px;
 }
+
 
