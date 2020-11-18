@@ -10,14 +10,23 @@
 }
 
 *{
-    margin: 5px;
+    margin: 0;
     padding: 0;
     font-size: 30px;
 }
 
+html {
+    width: 100vw;
+}
+
 body {
-    background-color: #f0f0f0;
+    background-color: #f6f6f6;
     color: black;
+    margin: auto;
+}
+
+header, main {
+    margin: 5px;
 }
 
 /*----------------------Header---------------------- */
@@ -44,8 +53,8 @@ img {
 
 .frame {
     position: absolute;
-    top: 26px;
-    left: 4px;
+    top: 30px;
+    left: 8px;
     width: 235px;
     height: 235px;
     border: 4px solid var(--starcommandblue);
@@ -86,11 +95,15 @@ main{
 }
 
 /*-----------Contacts----------- */
-.contacts {
+.contacts, .contacts-mobile {
     background-image: linear-gradient(to bottom right, #023e8a, #48cae4);
     color: white;
     width: 265px;
     text-align: center;
+}
+
+.contacts-mobile {
+    display: none;
 }
 
 .contacts h2 {
@@ -115,6 +128,17 @@ a{
 .contacts div {
     margin-top: 50px;
     padding: 5px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .15rem; 
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
 
 /*-----------Skillset----------- */
@@ -152,4 +176,151 @@ li:first-child {
     margin-top: 20px;
 }
 
+/*----------------------Mobile phone responsive---------------------- */
 
+@media (max-width: 480px){
+
+    header, main{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    header {
+        margin: auto;
+        text-align: center;
+    }
+
+    .left-header, .right-header {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .frame {
+        display: none;
+    }
+
+    .contacts {
+        display: none;
+    }
+
+    .contacts-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        letter-spacing: .3rem;
+    }
+
+    .contacts-mobile h2 {
+        color: white;
+        text-align: left;
+        font-weight: normal;
+        margin: 0 0 0 10px;
+    }
+
+    .contacts-mobile-inner {
+        display: none;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .contacts-mobile-inner div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 15px 0;
+    }
+
+    .contacts-mobile-inner h4{
+        margin-left: 50px;
+        font-weight: normal;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .contacts-mobile-inner.active {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 390px) {
+    .contacts-mobile h2 {
+        letter-spacing: normal;
+    }
+
+    .contacts-mobile-inner.active {
+        margin: 5px;
+    }
+
+    .contacts-mobile-inner.active h4 {
+        margin: 10px;
+        letter-spacing: normal;
+    }
+
+    h1 {
+        font-size: inherit;
+        margin: 0 0 20px 0;
+    }
+
+    img {
+        width: 70%;
+        margin: 0 0 20px 0;
+    }
+
+    .right-header {
+        margin: 20px 0 20px 0;
+    }
+
+    .right-header p {
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 42mm) {
+
+    .left-header, .right-header {
+        margin: 0;
+    }
+
+    .contacts-mobile {
+        width: 100vw;
+    }
+
+    .contacts-mobile h2 {
+        font-size: .4rem;
+    }
+    .toggle-button {
+        width: 10px;
+        height: 5px;
+    }
+
+    .contacts-mobile-inner.active {
+        margin: 0;
+        width: 158px;
+    }
+
+    .contacts-mobile-inner.active div {
+        height: 25%;
+        margin: 0;
+    }
+
+    .contacts-mobile-inner.active div h4 {
+        margin: 0;
+        font-size: .3rem;
+        font-weight: lighter;
+        letter-spacing: 0;
+    }
+}
